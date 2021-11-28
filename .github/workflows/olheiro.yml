@@ -1,0 +1,17 @@
+name: olheiro-olx
+on:
+  schedule:    
+    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
+jobs:
+  olheiro-olx:
+    runs-on: python:3.9-slim
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Gr1N/setup-poetry@v7
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+      - runs: poetry --version
+      - runs: python initial.py
