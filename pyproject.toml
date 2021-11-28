@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "olheiro-olx-action"
+version = "0.1.0"
+description = "Github Action para ficar de olho em produtos da olx"
+authors = ["Luccas Quadros <luccas.qdrs@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
