@@ -13,5 +13,5 @@ jobs:
         with:
           path: ~/.cache/pypoetry/virtualenvs
           key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-      - runs: poetry --version
-      - runs: python initial.py
+      - run: poetry --version
+      - run: python initial.py
